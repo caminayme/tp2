@@ -1,9 +1,24 @@
 *{
   box-sizing: border-box;  
+  font-family:'Roboto', sans-serif;
+ 
+}
+
+body{
+    background-color: #ebebeb;
 }
 
 header{
     background-color:  #EAC926;
+}
+
+
+.main{
+   
+  width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .font{
@@ -16,24 +31,19 @@ header{
 
 
 .barras{
+
     background-color: #03264C;
     color: white;
     width: 33px;
     height: 33px;
     border-radius: 20%;
-}
+    margin-bottom: 2em;
+    visibility: visible;
 
-.letra{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  font-family: 'Roboto', sans-serif;
-  background-color: white;
-  justify-content: flex-start;
-  width: 40vw;
-
+   
 
 }
+
 
 .titulares{
     font-size: 24px;
@@ -65,17 +75,20 @@ header{
 }
 
 main{
-    align-content: center;
-    align-items: center;
-    text-align: center;
     background-color: #ebebeb;
     margin-top: 1px;
     width: 90%;
+    margin: 0 5vw;
 }
 
-.envio{
+#envio{
     color: #39b54a;
-  
+    border: #39b54a 1px;
+    border-style: solid;
+    border-radius: 50%;
+    padding: 5px;
+ 
+
 }
 
 .producto{
@@ -83,19 +96,49 @@ main{
     border-style: solid;
     background-color: white;
     border-color: white;
-    margin: 15px;
-    width: 100%;
-    max-width: 250px;
-    height: auto;
+    align-self: center;
+    padding: 15px;
+
 }
 
-/* .cajatexto{
+.info{
     border: 1px;
     border-style: solid;
     background-color: white;
     border-color: white;
-    margin: 15px;
-    align-items: center;
-    width: 300px;
+    align-self: center;
+    padding: 15px;
 
-} */
+}
+
+.descripcion{
+    visibility: hidden;
+}
+
+.notMobile{
+    visibility: hidden;
+
+}
+
+
+
+@media (min-width: 361px) {
+   
+    .descripcion{
+        visibility: visible;
+    }
+
+    .boxShadow {
+        box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
+    }
+
+    .notMobile{
+        visibility: visible;
+    
+    }
+   
+    .barras{
+        visibility: hidden;
+    }
+}
+
